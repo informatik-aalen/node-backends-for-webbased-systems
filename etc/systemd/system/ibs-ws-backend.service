@@ -1,0 +1,16 @@
+[Unit]
+Description=ibs-backend
+After=network.target
+After=systemd-user-sessions.service
+After=network-online.target
+[Service]
+User=www-data
+Group=www-data
+#Environment=NODE_PATH=/usr/local/lib/node_modules
+WorkingDirectory=/media/sf_websocketfreigabe/ibs-backend/
+ExecStart=/usr/local/bin/node /media/sf_websocketfreigabe/ibs-backend/ws-backend.js  9996 "/media/sf_websocketfreigabe/html"
+Restart=always
+StandardOutput=file:/tmp/httpbackend-stdout.log
+StandardError=file:/tmp/httpbackend-stderr.log
+[Install]
+WantedBy=multi-user.target

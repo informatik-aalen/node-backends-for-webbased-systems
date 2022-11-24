@@ -1,0 +1,10 @@
+doctype html
+html
+	head
+	body
+		h1 Hallo
+		|body: #{JSON.stringify(body)}
+		br
+		|query: #{JSON.stringify(query)}
+		br
+- throw 1;

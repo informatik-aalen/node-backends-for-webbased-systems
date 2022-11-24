@@ -1,0 +1,12 @@
+{
+	"host": "localhost",
+	"port": 1883,
+	"conn_prm": {},
+	"topics": [
+			{
+				"topic": "mqttfetch/chat/+/fr/+",
+				"mod": "/media/sf_websocketfreigabe/html/ibs/mqtt/backend.js",
+				"f": "chat"
+			}
+	]
+}

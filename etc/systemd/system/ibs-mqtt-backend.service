@@ -1,0 +1,14 @@
+[Unit]
+Description=ibs-backend
+After=network.target
+After=systemd-user-sessions.service
+After=network-online.target
+[Service]
+User=www-data
+Group=www-data
+#Environment=NODE_PATH=/usr/local/lib/node_modules
+WorkingDirectory=/media/sf_websocketfreigabe/ibs-backend/
+ExecStart=/usr/local/bin/node /media/sf_websocketfreigabe/ibs-backend/mqtt-backend.js "/media/sf_websocketfreigabe/ibs-backend/mqtt-prm.json"
+Restart=always
+[Install]
+WantedBy=multi-user.target

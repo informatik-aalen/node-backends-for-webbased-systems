@@ -1,0 +1,14 @@
+doctype html
+html
+	head
+		script.
+			window.onload = async () => {
+				document.getElementById("o").firstChild.nodeValue =
+				await (await fetch("node-counter")).text();
+			}
+	body
+		h1 permanent-variables
+		div#o Hallo;
+		div
+			|Please reload page or
+			a(href="javascript:location.reload()") &nbsp;click here!

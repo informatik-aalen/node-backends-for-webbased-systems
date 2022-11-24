@@ -1,0 +1,13 @@
+doctype html
+-
+	if (data.counter == undefined)
+		data.counter = 0;
+	data.counter++;
+html
+	head
+		title Web-Counter
+	body
+		= `${data.counter} Zugriffe seit restart`
+		br
+		pre
+			- console.log(req)
